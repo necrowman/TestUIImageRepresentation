@@ -31,11 +31,33 @@ class TestImageDecodingTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    func testPerformanceExample() {
+    func testPerformanceExample0_35() {
         // This is an example of a performance test case.
         self.measureBlock {
             for _ in 0..<15 {
                 let data = UIImageJPEGRepresentation(self.image!, 0.35)
+                print("size -> ", data?.length)
+            }
+            // Put the code you want to measure the time of here.
+        }
+    }
+    
+    func testPerformanceExample0_5() {
+        // This is an example of a performance test case.
+        self.measureBlock {
+            for _ in 0..<15 {
+                let data = UIImageJPEGRepresentation(self.image!, 0.5)
+                print("size -> ", data?.length)
+            }
+            // Put the code you want to measure the time of here.
+        }
+    }
+    
+    func testPerformanceExample1_00() {
+        // This is an example of a performance test case.
+        self.measureBlock {
+            for _ in 0..<15 {
+                let data = UIImageJPEGRepresentation(self.image!, 1)
                 print("size -> ", data?.length)
             }
             // Put the code you want to measure the time of here.
